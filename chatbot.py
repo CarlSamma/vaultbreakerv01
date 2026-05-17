@@ -30,7 +30,16 @@ def main():
                 tools=[{"type": "x_search"}],
             )
 
-            assistant_message = response.output[0].content[0].text if response.output else "No response."
+            # Robust response extraction for xAI Responses API
+            if hasattr(response, 'output_text') and response.output_text:
+                assistant_message = response.output_text
+            elif response.output:
+                try:
+                    assistant_message = response.output[0].content[0].text
+                except (AttributeError, IndexError, TypeError):
+                    assistant_message = str(response.output)
+            else:
+                assistant_message = "No response received."
             print(f"Grok: {assistant_message}\n")
 
             messages.append({"role": "assistant", "content": assistant_message})
