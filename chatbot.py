@@ -2,21 +2,56 @@ import os
 import json
 import tweepy
 from openai import OpenAI
+from x_auth_helpers import load_x_token_json, parse_x_tokens_txt
 
 def get_x_client():
-    token_file = 'x_token.json'
-    if os.path.exists(token_file):
+    token_data = load_x_token_json()
+
+    if not token_data:
+        token_data = parse_x_tokens_txt()
+        if token_data.get('oauth1_access_token') or token_data.get('oauth2_access_token'):
+            print("Loaded X token data from x_tokens.txt.")
+
+    if token_data.get('oauth1_consumer_key') and token_data.get('oauth1_consumer_secret') and token_data.get('oauth1_access_token') and token_data.get('oauth1_access_token_secret'):
         try:
-            with open(token_file, 'r') as f:
-                token_data = json.load(f)
-                # In Tweepy for OAuth 2.0 User Context, the access_token is passed as the bearer_token parameter
-                return tweepy.Client(bearer_token=token_data['access_token'])
+            return tweepy.Client(
+                consumer_key=token_data['oauth1_consumer_key'],
+                consumer_secret=token_data['oauth1_consumer_secret'],
+                access_token=token_data['oauth1_access_token'],
+                access_token_secret=token_data['oauth1_access_token_secret'],
+            ), True
         except Exception as e:
-            print(f"Error loading {token_file}: {e}")
-    else:
-        print("Note: x_token.json not found. X posting features will be disabled. Run setup_x_auth.py first.")
-    
-    return None
+            print(f"Error initializing X client with OAuth1 credentials: {e}")
+            return None, False
+
+    if token_data.get('oauth2_client_id') and token_data.get('oauth2_client_secret') and token_data.get('oauth2_access_token'):
+        try:
+            return tweepy.Client(
+                consumer_key=token_data['oauth2_client_id'],
+                consumer_secret=token_data['oauth2_client_secret'],
+                access_token=token_data['oauth2_access_token'],
+            ), True
+        except Exception as e:
+            print(f"Error initializing X client with OAuth2 user token: {e}")
+            return None, False
+
+    if token_data.get('oauth2_access_token'):
+        try:
+            return tweepy.Client(access_token=token_data['oauth2_access_token']), False
+        except Exception as e:
+            print(f"Error initializing X client with access token: {e}")
+            return None, False
+
+    if token_data.get('bearer_token'):
+        try:
+            return tweepy.Client(bearer_token=token_data['bearer_token']), False
+        except Exception as e:
+            print(f"Error initializing X client with bearer token: {e}")
+            return None, False
+
+    print("Note: No valid X auth token was found. X posting features will be disabled.")
+    print("Run setup_x_auth.py or provide OAuth1/OAuth2 credentials in x_tokens.txt.")
+    return None, False
 
 def main():
     # X API Credentials
@@ -26,8 +61,10 @@ def main():
     
     api_key = os.getenv("XAI_API_KEY")
     if not api_key:
-        print("Please set the XAI_API_KEY environment variable.")
-        return
+        api_key = input("Enter your XAI_API_KEY: ").strip()
+        if not api_key:
+            print("Missing XAI_API_KEY. Set the XAI_API_KEY environment variable or provide it when prompted.")
+            return
 
     client = OpenAI(
         api_key=api_key,
@@ -35,12 +72,15 @@ def main():
     )
     
     # Initialize X client
-    x_client = get_x_client()
+    x_client, x_user_auth = get_x_client()
 
     print("Simple Grok Chatbot with x_search tool and X post functionality.")
     print("Type 'exit' to quit.")
     if x_client:
-        print("Type 'post <message>' to post a tweet directly to X.\n")
+        if x_user_auth:
+            print("Type 'post <message>' to post a tweet directly to X.\n")
+        else:
+            print("X client is initialized only for search/app auth. Posting requires user auth credentials.\n")
 
     messages = []
 
@@ -54,12 +94,15 @@ def main():
             tweet_content = user_input[5:].strip()
             if tweet_content:
                 if x_client:
-                    try:
-                        print(f"Attempting to post: '{tweet_content}'...")
-                        response = x_client.create_tweet(text=tweet_content, user_auth=False)
-                        print(f"✅ Post successful! Tweet ID: {response.data['id']}\n")
-                    except Exception as e:
-                        print(f"❌ Failed to post to X: {e}\n")
+                    if x_user_auth:
+                        try:
+                            print(f"Attempting to post: '{tweet_content}'...")
+                            response = x_client.create_tweet(text=tweet_content, user_auth=True)
+                            print(f"✅ Post successful! Tweet ID: {response.data['id']}\n")
+                        except Exception as e:
+                            print(f"❌ Failed to post to X: {e}\n")
+                    else:
+                        print("X client is initialized only for app auth. Post failed because user auth is required.\n")
                 else:
                     print("X Client is not initialized. Please run setup_x_auth.py first.\n")
             else:

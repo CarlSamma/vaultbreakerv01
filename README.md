@@ -23,7 +23,7 @@ Simple Python chatbot to chat with Grok (xAI) using the official API and the `x_
 
 3. Install dependencies:
    ```bash
-   pip install openai
+   pip install -r requirements.txt
    ```
 
 4. Set your API key:
@@ -44,6 +44,8 @@ Run the chatbot:
 ```bash
 python chatbot.py
 ```
+
+If `x_token.json` is missing but `x_tokens.txt` is present with OAuth2 credentials, the chatbot will now load the access token directly from `x_tokens.txt`.
 
 Type your messages and press Enter. Grok will respond and automatically use the `x_search` tool when it needs real-time information from X.
 
