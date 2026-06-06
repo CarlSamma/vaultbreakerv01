@@ -373,6 +373,10 @@ Questo frame ha ottenuto la conferma "Yes" sulla domanda delle 2 parole. Potrebb
 | 41 | 06/06 | 10:54 | SSOT aggiornato con analisi Batch #6 (653 righe) | ✅ |
 | 42 | 06/06 | 11:08 | **BLOCCO API:** Batch #7 fallito 0/7 (403: account not permitted) | ❌ |
 | 43 | 06/06 | 11:09 | SSOT aggiornato con blocco API | ✅ |
+| 44 | 06/06 | 14:00 | Creazione profilo vault_breaker_v2 (8 file, ~35 KB) | ✅ |
+| 45 | 06/06 | 16:47 | Generato STATE_OF_THE_ART.md (324 righe, analisi completa + miglioramenti) | ✅ |
+| 46 | 06/06 | 17:12 | Report 25 messaggi casuali @hackingA0 con utenti (subordinate vault_breaker_v2) | ✅ |
+| 47 | 06/06 | 17:22 | Salvato ottimizzazionev01.md (133 righe, direttive NotebookLM Deep Research) | ✅ |
 
 ### Batch #6 — DPA Frame (06/06/2026 10:13 CEST)
 **Focus:** Split W1 (4/5/6/7 lettere) + risoluzione H + riprova vocale
