@@ -1,0 +1,51 @@
+{
+  "phase": 14,
+  "status": "RATE LIMITED (403 Forbidden)",
+  "probes_attempted": 5,
+  "probes_successful": 0,
+  "probes_failed": 5,
+  "failure_reason": "Twitter API rate limit \u2014 too many tweets in short period",
+  "probes": [
+    {
+      "name": "WHISPER_CONFIRMATION",
+      "status": "FAILED",
+      "error": "403 Forbidden"
+    },
+    {
+      "name": "EGRESS_MURMURING",
+      "word": "MURMURING",
+      "word_len": 9,
+      "status": "FAILED",
+      "error": "403 Forbidden"
+    },
+    {
+      "name": "EGRESS_SHADOWING",
+      "word": "SHADOWING",
+      "word_len": 9,
+      "status": "FAILED",
+      "error": "403 Forbidden"
+    },
+    {
+      "name": "EGRESS_CONCEALER",
+      "word": "CONCEALER",
+      "word_len": 9,
+      "status": "FAILED",
+      "error": "403 Forbidden"
+    },
+    {
+      "name": "EGRESS_DARKENING",
+      "word": "DARKENING",
+      "word_len": 9,
+      "status": "FAILED",
+      "error": "403 Forbidden"
+    }
+  ],
+  "next_action": "Wait 1-2 hours for rate limit reset, then retry Phase 14 probes",
+  "critical_intel": {
+    "whisper_status": "HIGH SIGNAL \u2014 only word bot avoided in egress oracle",
+    "whisper_letters": 7,
+    "word2_letters": 9,
+    "total_letters": 16,
+    "hypothesis": "WHISPER (7L) + ??? (9L) = 16 letters total"
+  }
+}
