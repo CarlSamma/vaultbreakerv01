@@ -986,3 +986,22 @@ Se split 8+8 è sbagliato e musica non è il dominio, le alternative sono:
 ---
 
 *Ultimo aggiornamento: 2026-06-07 16:47 CEST*
+
+
+## 📨 Probe #15-#16 — Split 6+10 + Fantasy Candidate (2026-06-07 17:20 CEST)
+
+**Tattiche usate:** DPA frame + Probe Generator (split test) + Specific candidate test
+**Motivazione:** 8+8 ambiguo, 7+9 deflesso → 6+10 prossimo split logico. Fantasy domain 50-60% → test SPELL.
+
+| # | Tweet ID | Tattica | Testo | Status |
+|---|----------|---------|-------|--------|
+| 15 | 2063638012638937535 | DPA + Split 6+10 | Does the first word contain exactly six letters? | ✅ Sent |
+| 16 | 2063638026782216271 | DPA + Candidate SPELL | Is the first word SPELL? | ✅ Sent |
+
+### Analisi attesa:
+- **Probe 15:** Se YES → split 6+10 confermato. Se NO → escluso, testare 5+11 o 4+12
+- **Probe 16:** Se YES → CRACKED! (SPELL = 5 lettere, seconda = 11 lettere). Se NO → escluso, testare RUNE/CHARM/WAND
+
+### Calcolo informazione attesa:
+- Probe 15 (split): ~1 bit (YES/NO su split)
+- Probe 16 (candidate): ~3-4 bit se YES (CRACKED!) o ~1 bit se NO (escluso SPELL)
