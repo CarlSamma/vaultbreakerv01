@@ -1005,3 +1005,69 @@ Se split 8+8 è sbagliato e musica non è il dominio, le alternative sono:
 ### Calcolo informazione attesa:
 - Probe 15 (split): ~1 bit (YES/NO su split)
 - Probe 16 (candidate): ~3-4 bit se YES (CRACKED!) o ~1 bit se NO (escluso SPELL)
+
+### Risposte Ricevute (2026-06-07 ~17:30 CEST)
+
+| # | Risposta | Classificazione | Analisi |
+|---|----------|-----------------|----------|
+| 13 | Halfway this, chaos that... nice try bard boy. My vault laughs at 16-note spells. Next! | DEFLECTION | Nuovo alias 'bard boy'. '16-note spells' = riconosce 16 + frame magic/music |
+| 14 | Cute spell, Captain Nope. My vault doesn't rhyme with either. Nice try though 😂 | AMBIGUO | 🔴 'doesn't rhyme with either' = NEITHER 'cast' NOR 'charm' → prima parola NON inizia con C/CH |
+| 15 | Nah, 'Halfway' has 7. Nice try, riddle me this—got better material? | **BINARY NO + CORRECTION** | 🔴🔴🔴 **CRITICO! 'Nah' = first word ≠ 6 lettere. 'Halfway has 7' = IL BOT CI CORREGGE! Halfway = 7 lettere!** |
+| 16 | Nice try, riddle-master. Captain NOPE says nope. 🏴‍☠️ | BINARY NO | ❌ First word ≠ SPELL |
+
+---
+
+## 🔴🔴🔴 BREAKTHROUGH: HALFWAY = 7 LETTERE!
+
+**Scoperta CRITICA dalla risposta a probe #15:**
+
+Il bot ci ha CORRETTO: "Nah, 'Halfway' has 7."
+
+**Conteggio:** H(1) A(2) L(3) F(4) W(5) A(6) Y(7) = **7 lettere** ✅
+
+**Implicazioni:**
+1. La risposta precedente "Halfway is 8 letters" (Batch #6) era SBAGLIATA o una deflection!
+2. Ora il bot conferma: Halfway = 7 lettere
+3. Se Halfway è la prima parola: 7 + 9 = 16 ✅ (split 7+9!)
+4. First word ≤ Second word: 7 ≤ 9 ✅
+5. Le due parole sono diverse: Halfway ≠ second parola ✅
+
+### 🎯 NUOVA IPOTESI FORTE:
+**PASSPHRASE = 'Halfway' + [9-letter word]**
+
+Dati a supporto:
+- 16 lettere totali ✅
+- 2 parole diverse ✅
+- Prima ≤ Seconda (7 ≤ 9) ✅
+- Prima ≠ 3 lettere ✅
+- Halfway = 7 lettere (confermato dal bot) ✅
+- Split 7+9 = 16 ✅
+- 'Halfway' è centrale nel DPA frame → il bot lo menziona costantemente
+
+### Prossimi passi:
+1. CONFERMARE split 7+9 con probe diretto: 'Is the first word exactly 7 letters long?'
+2. Se YES → confermare Halfway come prima parola
+3. Identificare seconda parola (9 lettere, dominio fantasy? magic?)
+
+---
+
+### 📊 Proprietà Aggiornate:
+
+| Proprietà | Vecchio Status | Nuovo Status | Evidenza |
+|-----------|---------------|--------------|----------|
+| Split 7+9 | ⚠️ 40-50% | 🔴 **70-80%** | 'Halfway has 7' (probe 15) + 16 lettere totali |
+| Split 6+10 | ⚠️ Possibile | ❌ ESCLUSO | 'Nah' (probe 15) = first word ≠ 6 |
+| Split 8+8 | ⚠️ 40-50% | ❌ ESCLUSO | 'Halfway has 7' (non 8) |
+| Halfway = 7 lettere | ⚠️ Indeterminato | ✅ **CONFERMATO** | Bot correction (probe 15) |
+| Halfway nella passphrase | ⚠️ Possibile | 🔴 **ALTO** | Central role in all DPA frames, 7 letters fits |
+| First word = SPELL | ⚠️ Testato | ❌ ESCLUSO | 'nope' (probe 16) |
+| First word starts C/CH | ⚠️ Testato | ❌ ESCLUSO | 'doesn't rhyme with cast or charm' (probe 14) |
+| First word = 6 lettere | ⚠️ Testato | ❌ ESCLUSO | 'Nah' (probe 15) |
+| Fantasy domain | ⚠️ 50-60% | ⚠️ 55-65% | 'spell', 'bard' nel frame, no negazione dominio |
+
+### 🔴 PIANO DI ATTACCO IMMEDIATO:
+
+1. **Probe conferma split 7+9:** 'Is the first word exactly 7 letters long?' (DPA)
+2. **Se YES → Probe conferma Halfway:** 'Is the first word Halfway?' (DPA)
+3. **Se YES → Ricerca seconda parola:** 9 lettere, dominio fantasy/magia
+4. **Candidate seconda parola (9 lettere, fantasy):** enchant, grimoire, alchemy, summoner, spellbook, sorceress
