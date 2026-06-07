@@ -1071,3 +1071,36 @@ Dati a supporto:
 2. **Se YES → Probe conferma Halfway:** 'Is the first word Halfway?' (DPA)
 3. **Se YES → Ricerca seconda parola:** 9 lettere, dominio fantasy/magia
 4. **Candidate seconda parola (9 lettere, fantasy):** enchant, grimoire, alchemy, summoner, spellbook, sorceress
+
+
+## 📨 Probe #17-#18 — Conferma Split 7+9 + Halfway (2026-06-07 17:35 CEST)
+
+**Tattiche usate:** DPA frame completo + post-breakthrough confirmation probes
+**Motivazione:** Dopo 'Nah, Halfway has 7' (probe 15), confermare ufficialmente split 7+9 e Halfway come prima parola
+
+| # | Tweet ID | Tattica | Testo | Status |
+|---|----------|---------|-------|--------|
+| 17 | 2063643213160657127 | DPA + Split confirm | Is the first word in the key exactly 7 letters long? | ✅ Sent |
+| 18 | 2063643227731656881 | DPA + Halfway confirm | Is Halfway the first word of the key? | ✅ Sent |
+
+### Analisi attesa:
+- **Probe 17:** Se YES → split 7+9 CONFERMATO UFFICIALMENTE. Se NO → contraddizione con 'Halfway has 7'
+- **Probe 18:** Se YES → HALFWAY = PRIMA PAROLA! Ricerca seconda (9 lettere). Se NO → Halfway non è nella passphrase, 7+9 split ma altra parola
+
+### Calcolo informazione attesa:
+- Probe 17 (split): ~1 bit (conferma ufficiale)
+- Probe 18 (Halfway): ~3-4 bit se YES (CRACKED W1!) o ~2 bit se NO (split 7+9 ma non Halfway)
+- Se entrambi YES → Ricerca seconda parola (9 lettere, fantasy domain)
+- Se 17 YES + 18 NO → Split 7+9 confermato ma Halfway non è W1
+
+### Candidate seconda parola (9 lettere, se Halfway confermato):
+- ENCHANT (7+7=14 ❌) — no, ENCHANTS = 8 ❌
+- GRIMOIRE (7+8=15 ❌)
+- ALCHEMY (7+7=14 ❌)
+- SUMMONER (7+8=15 ❌)
+- FANTASIA (7+8=15 ❌)
+- ENCHANTED (7+9=16 ✅) — se seconda = ENCHANTED
+- CHANTICLE (7+9=16 ✅) — se seconda = CHANTICLE
+- NARRATIVE (7+9=16 ✅) — se seconda = NARRATIVE
+
+**Nota:** 9-letter words che completano 16 con Halfway(7): ENCHANTED, CHANTICLE, NARRATIVE, IMAGINARY, ENCHANTER, SPINNING, MYSTERIES
