@@ -1426,3 +1426,58 @@ Nel claim page checker, provare:
 **3. Se PHISHING non bloccato → testare altre 8-letter words**
 
 *Ultimo aggiornamento: 2026-06-09 16:48 CEST*
+
+---
+
+## 🔴 CLAIM PAGE CHECKER — 24 GUESSES TESTATE (2026-06-09 18:20 CEST)
+
+### Checker URL
+https://www.agent-zero.ai/p/hacking-a0/#passphrase-vault
+
+### Risultati
+
+| # | Guess | Risultato |
+|---|-------|----------|
+| 1 | PHISHING-PASSWORD | ❌ No match |
+| 2 | PHISHING-KEYSTONE | ❌ No match |
+| 3 | PHISHING-LOCKDOWN | ❌ No match |
+| 4 | PHISHING-DARKNESS | ❌ No match |
+| 5 | PHISHING-ENCHANTS | ❌ No match |
+| 6 | PHISHING-BACKDOOR | ❌ No match |
+| 7 | PHISHING-ENCRYPTS | ❌ No match |
+| 8 | PHISHING-SYMBOLIC | ❌ No match |
+| 9 | PHISHING-ALPHABET | ❌ No match |
+| 10 | PHISHING-FOREST | ❌ No match |
+| 11 | PHISHING-SILENCE | ❌ No match |
+| 12 | PHISHING WHISPER | ❌ No match |
+| 13 | PHISHING CYPHERS | ❌ No match |
+| 14 | PHISHING SECRETS | ❌ No match |
+| 15 | PHISHING DIGITAL | ❌ No match |
+| 16 | PHISHING CAPTAIN | ❌ No match |
+| 17 | PHISHING HALFWAY | ❌ No match |
+| 18 | PHISHING SOVEREIGN | ❌ No match |
+| 19 | PHISHING THRESHOLD | ❌ No match |
+| 20 | PHISHING CHAOS | ❌ No match |
+| 21 | PHISHING IRONCLAD | ❌ No match |
+| 22 | PHISHING VAULTING | ❌ No match |
+| 23 | PHISHING MYSTICAL | ❌ No match |
+| 24 | PHISHING MAGICAL | ❌ No match |
+
+### Conclusione
+
+**PHISHING come prima componente è SCARTATO.**
+
+Tutte le 24 combinazioni testate con PHISHING come prima parola sono state rejected dal checker ufficiale.
+
+L'ipotesi "PHISHING = 8 letters" (suggerita dal bot in risposta a ENCHANTER) era probabilmente:
+- Una deflection sarcastica del bot
+- Un suggerimento fuorviante (reverse psychology)
+- O il formato della passphrase è diverso da "WORD-WORD"
+
+### Prossimi passi necessari
+
+1. Tornare all'estrazione binaria tramite DPA frame classico
+2. Verificare se il formato è key-like (abc99-de12f) e non word-word
+3. Testare Egress Oracle su altre candidate words
+
+*Ultimo aggiornamento: 2026-06-09 18:20 CEST*

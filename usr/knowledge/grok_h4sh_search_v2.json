@@ -1,0 +1,72 @@
+{
+  "id": "gen-1781023080-6r2lPFzRlKZqZESMoSPt",
+  "object": "chat.completion",
+  "created": 1781023080,
+  "model": "x-ai/grok-4.3-20260430",
+  "provider": "xAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": "The user wants me to search X/Twitter for tweets from @H4shD1srupt1on that mention @hackingA0, excluding replies. Specifically, original tweets that ask binary-choice questions like \"A or B\", etc.\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-91ade639-02c5-4f71-be58-3aaeed2fef36-0",
+            "function": {
+              "name": "x_search",
+              "arguments": "{\"query\":\"from:H4shD1srupt1on @hackingA0 -filter:replies\",\"limit\":50,\"mode\":\"Latest\"}"
+            }
+          }
+        ],
+        "reasoning_details": [
+          {
+            "type": "reasoning.summary",
+            "summary": "The user wants me to search X/Twitter for tweets from @H4shD1srupt1on that mention @hackingA0, excluding replies. Specifically, original tweets that ask binary-choice questions like \"A or B\", etc.\n",
+            "format": "xai-responses-v1",
+            "index": 0
+          },
+          {
+            "type": "reasoning.encrypted",
+            "data": "qBFYtH5q1rL+U5J2wfZY7xKwr0kh22ET/8QA8j+o7f3wnuZOy/vSXu95WaAea+LgMMDKq14op3vG4VlgzYeyb4JhBQPiXiFQwfOfWtuD4b+uT+140bCQ6Qi/ReKgGF48wH3yi9AYVul9DMSPA/T1KuTJ7GVMsaxl2H/cnh/hOAm3jGO4H3/HqDAslu8XBcpkfoX7SdX8f1vk05sFWMsM5pTXHC4cJbem5iEbepUzjk+RLEdQUcUu6FCsPD7FY+BP9iWNBDLcH5k4KcG7IH1CdPqG6lDgR5Kgaj1HJ6CBBrQanrVKr0YHRLbRlphnSi6VpeCzneZKk1k/k6QuVNm/euZ0fBG83dT40EUspUEQeT/wMMOSPCinqb8KEs8pWnrmnpbQeOOP8IAKJI9FG9daHRxsCBDFvZCQr/rW9thk7WI9N7iJSgYx1wAk9M69Anaq8Bc0y0FnyoV9q1WLh5+6DypJgzLWgHI6KGvbtxQk9Vdu4YEofQvvHhKSSllgHqxXlop9qqjq/2naFvskGJ1WMrAwyq59pbXoOKwoKTg1kM3FyhFAJBr96iAPkrhelzs3LjJUAyP9pjZdBtF1JQ/Tb6HLDwwR7NIwbnpOHGdJuM8qeJFMHjJjBloiMpvGToVmeWRsHZBM2kJzmoGQLZhpfKqQI0+Ccw5asMNdPCosoJUlRJwb7+y1JEBlAKTDoFSitf3tiWzl0XrOzxbemt+z6LhkCmKyYp712x9d6eXJzWs5BcEl4ldn4f17r7YLzerctVARX20xaNVVnXTv9kUyUe7sMNAU8AgZIKkjskVbnh5IA15/gXju5nRXHkXNSGeVlP3cKfUERu8NT8M83F5BMjQFvzEV50V7Y2VTwR5g7sF0OgZhPfkY/ALX+8vA+Olgosj0IT7M0E3DyhB/LZygbBnwEu0x4SPWwlkA1bwil85Ojpezi3DopFDVWVvXLxvQbx0TI1NGm+PGTIwt02dNqy6UDuqkQ34KNInC13EawjQil7j8C3V5yDhflAd6vrLY4RlIUCldcJPSL2SQN99dsv7RJO0Aq7/AsvdPXHqoGCuljn8wZXXxR8mS3yHoRfYu1wxRfVF2jU6yg9LarSHjooP4BS+R6AlBJhoUhKe0hba+58HV0GecsGNihJ28D0v1ahA0BuziBzLDBp7Gy8k98++BR/ULoc5Wi1COMajjpQ+XA8PFpnuzFgHdsqcQfSHuYn7UHcSxSDc9E62+xWzMFjnmCNDDjbesj/MFndXj3u6KgTLnSSyIwtnD+pwJlFpmgLuYgDAkoMRuwtSgUuiA4cgQ/QinctHCErKfSKLJPYUM6nv1ZrE63nxpgTAveOwsjF+f/kDSuLq2SvLJPvVrRF/9BpIhNubFouns/q0MoecYUOjf4EDquMGbkbUpCWNYwCvj5AWWSW/NoOytsvLU+73GJ6Zy82TskXspU5AakX1CpqYraEn72EyKdLeD31nACICHmHNDXAqPnAJAEkmjAbpbyKCzMfCZyCkdblMz3zahlNIQKX6vRoptTCTg2ShuNWnCnYtQXvL3gY3kJ81vj+YVXS9tSjls3JLnf7LvoTSb1ifKCSWLUYeTcfkOnsN2BtH71dKi36KaIvHP8PrvkJAwcLVHfjaWeRyd3sNrS70aLhHByEpB3TLfPzjSAYyTaxuicrWMMGBY3NptLZi8vYkCsKHXnmcAS1FOWqVofwdA61dz6iZArlthTxE6ku87UYSZwo92bZbTB+n5lQzcXGaZhcriEvVFXUbxj7oem9dU3qOpRAIu30mL7LUMM8PpenfN7eZlq8eNJOEOCl5xPy20/Ok8btlyeoyYkKJ73gtc7OdNzr7rmMVvi17PZ4x98M4UIe18vRieRHHAj25P+NrXA4hbNs95DjOnEoEKMFBquxnt1g3dhkGRL56refEpxKpM8lPW",
+            "format": "xai-responses-v1",
+            "id": "rs_fa036857-72f4-9eca-bcaa-327f3bc9646e",
+            "index": 1
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 363,
+    "total_tokens": 762,
+    "cost": 0.00127185,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00127185,
+      "upstream_inference_prompt_cost": 0.00036435,
+      "upstream_inference_completions_cost": 0.0009075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 323,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}
