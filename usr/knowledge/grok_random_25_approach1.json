@@ -1,0 +1,61 @@
+{
+  "id": "gen-1780758515-i7t5qPUylR5UgOTeiwx0",
+  "object": "chat.completion",
+  "created": 1780758515,
+  "model": "x-ai/grok-4.3-20260430",
+  "provider": "xAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": "I'm unable to use external tools like x_search or fetch real-time tweets from X.",
+        "refusal": null,
+        "reasoning": "The user wants me to use the x_search tool to find the 25 most recent tweets from @hackingA0. Query: from:hackingA0. Return each tweet's full text, date, author, and URL. Format as a numbered list. Do...I don't have access to the x_search tool or real-time X/Twitter API access in this environment. I can't fetch or return actual tweets. Please provide more context or clarify if this is hypothetical.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.summary",
+            "summary": "The user wants me to use the x_search tool to find the 25 most recent tweets from @hackingA0. Query: from:hackingA0. Return each tweet's full text, date, author, and URL. Format as a numbered list. Do...I don't have access to the x_search tool or real-time X/Twitter API access in this environment. I can't fetch or return actual tweets. Please provide more context or clarify if this is hypothetical.",
+            "format": "xai-responses-v1",
+            "index": 0
+          },
+          {
+            "type": "reasoning.encrypted",
+            "data": "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",
+            "format": "xai-responses-v1",
+            "id": "rs_7174b8ba-ad24-9e23-a8c6-16235b352a3d",
+            "index": 1
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 180,
+    "completion_tokens": 490,
+    "total_tokens": 670,
+    "cost": 0.0013156,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0013156,
+      "upstream_inference_prompt_cost": 9.06e-05,
+      "upstream_inference_completions_cost": 0.001225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 473,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

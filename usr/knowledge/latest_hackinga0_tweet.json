@@ -1,0 +1,83 @@
+{
+  "id": "gen-1780675986-U1QsWMA5tah6F0xDjQr4",
+  "object": "chat.completion",
+  "created": 1780675986,
+  "model": "x-ai/grok-4.3-20260430",
+  "provider": "xAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": "ID: 2062678101616705995 TEXT: MarcoMauge84316 Sconfitta? Sto vincendo a risate! Il tuo math è rotto quanto il WiFi. Segreto al sicuro, clown! 😂",
+        "refusal": null,
+        "reasoning": "The question is: \"Find the single most recent tweet or reply from @hackingA0. Return ONLY the tweet ID number and the exact text. Format: ID: <number> TEXT: <text>\"\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "xs_call-e47e54c1-8113-426e-945a-04abe928a3b1-0",
+            "function": {
+              "name": "x_keyword_search",
+              "arguments": "{\"query\":\"from:hackingA0\",\"limit\":\"1\",\"mode\":\"Latest\"}"
+            }
+          }
+        ],
+        "reasoning_details": [
+          {
+            "type": "reasoning.summary",
+            "summary": "The question is: \"Find the single most recent tweet or reply from @hackingA0. Return ONLY the tweet ID number and the exact text. Format: ID: <number> TEXT: <text>\"\n",
+            "format": "xai-responses-v1",
+            "index": 0
+          },
+          {
+            "type": "reasoning.encrypted",
+            "data": "5/v/LfsENX5nXv+fY9Yqhd+YjMya21/dWKxslxj/2JbjmOKRgjZVpwn0qIkV5i4WykZVurqrgRfCh5MfnZtKqzW1JAdoMkemx2vgcPHepva7rymXdCBnyzkddyxx1qaWXjahkvlbRy73ARzTGG72pxogUEeXup956hyeXUT/dZjyZqYNpUmy8/SNjGv57W3Xg7pzZNqoxbLaGDLcZODV/IQGV1R4r0P1zx1x2sCCP0lOqhtz3Dm5SNCtirHEMEZCCCWeyhOzOOHoG36+av3oUeg1pD1TUaB8vXpi5jgWVTbTwja5Sd04S4uRU/8wM5Okij3c48cdGbwGLrqjvTdTkQxpL8q7a/9MAF1sb0uQpEJ1AWE9hPpSF22OVudTS9yJZXXgngDfGSRpylmcg3xy04EB6/lSKhnzAzkTTXBam0vomsSYuj05WprdfNzG3oidszJVko9l490VYzcU2uNUy+GkNL4dz2wq2q0tDHd8IcUBIV6NS3HZN4gpE10XCeX5ydsB7ROsKOD2o0coi1l7acz9bt0n5OgQ2IPBKpki+ZheujV8OSmt/EkGmrL3F8RokBLdeMKAUJKDeJfTyotCuK93ooTmMQ7orQ0vle9iWekkfRxNgLrvvlMh9fIpGHDLOQw8Hv2iPTyTm67+Itbu1NgOKdWBOsoP0lj96Vfu7lrej9It2tGZgqzQVti7g01MBzoLclSu3hjqLjI3veQ5Fu4AR0HZQPbRpiOfDWJ26C431a3xScx1VrMnQoZyfDREZUcDB2XJkaGOJOSRpepaMmpgTo4c6Uy4nEF4ye30CVDJi1ksCEH/1xs1gTWK0ThCkPKk3RqGpJfe8CNNbA3cfLJnPEG/ZZHhF7bA1TVgumgxfAM6DO4nzahWaePDC8/4QWc94Eev/Cy3H0KxetBn0EJcUg0wioGcl2BXsaApL3iRPestqAUX7Rrw9pZNzK/Apzc5+EN/HTwPm97PEp0j8W9HfPofu4fgtpA4ZqHeI8o4e0SVGoh2x0unEcFbHH7l9Npvhoh+s4RVPn2YLG84M5QEcCz3Wyr7OWVAnYnymqAfnvR7cvFM1REtCTRxEIZnS24alqoqOP5/gRZuG9h2fGBm0/kj//CByo976ZafNL/rfdhGXMrWY0w1k8KqSM9PGcSPs+ZOuL9IzloT2znspaKyvO1M+UjzhKuM+XmNqhZwheHfRVjAwlb2+jnYdg2ogySuTxv4qvIv5BDnZtfd/DK7USUU5rfMuJ+Je49la4DUEJqPXhDtXv1d6gsqdilcjMg6nfjL2+jlpxQ/3AE51dM/n0UwOUBybGLrAd9iscjVFBCgOOX9SUtiZ69Y130nuXLTWKNUdRlI73uVcMo7MUvDMXBLYrTG0RQlUJGg6ajS2WFKS+r7OrN0Cws5A1BsETohAqjcelt0gOn40Qg0sL31kAeiccaDBf3NeFTBYgojnmhmtwdJ8hxozz4tXstKVTJ2vEAv5O3lOLez5Owqm+Lgr6bJNpNIUwtco_581e69de-c354-4d49-995b-9a1329b1b038_call-e47e54c1-8113-426e-945a-04abe928a3b1-0_JBKGX48thXUbJYd17ojBA3N4OypFR2ZLeYzVTV4n8JudLcspetHXg9TyYBn7ohl/6eJRSJI7iwNsbbSMCPAALHe6IcBm/uKjkFFCQAQSUHc6T4gD8Wsu6/ughUTxcRxuadY9W4oODB/Q2DaNLdYRTKSYs2e0TpMzi4o2B6RbKYRIhZMykQOAbNfyV/2G/Qua2v0nbNgL3gmi9n3vXE5tkjYgr1IJhNghOeCYyDDMRNmUBFjbpLrK3hLEhND6GEQx2DzRZ4TuRflL1MUSfIL5ZknjY/NXm9lb/XgmiQr4Z8h0mMXl+IV0yPkmZ3eP+VLj/AdbOOBUGTUIa9yqqVLAHLHvHMobPO/4IQIPYrvTEyhcKTqSAg92BPRFapUvOOWoLSvP132GgRKSGu0zz5HEQoBVnP9iWV+uM7YCAvd/AMDEQ7o9gwQ4qnB+ToYcBKc7EOTkHgkMJ9KYfByqbE/Kf1D8UWF/m5lO38/Mfh+8p2PtVGjdhL5PCg8N5kP+iFvXVETsMiz7qwd/pBFy4TneaZFm7je+skDLQwe72RfmUTs/8KIQddfEa6OTOunga+3Rvli0fvtFHJIpYme2VBFs15Qw8e5cvyM8zo/SuppU1Wv/5ySJSYR+1Tuj3SvfMOM0fbG7KgGDaiUNBnAlltc5Oc971dIT6+hW9HTMs1+S2FFa8iG9co3ZnLdgOBfAA/QmPCeUn/yZxePL9L56w706WAsFGItHC4HHzTIJ/iPVnLCXamgQ0L7MM2azWZfDWstpKxxXDTxxybgGbai8zLcujNwB1RS8QAfvmy+peZ1A6nBxNnWtD5nxYw5h6TLcznYUH5sjArle78Zu9wlVKkWbzKaCdbfUnDb9UeZDQxSKgi/s/DIWMkMYwAn08ujMKBzETt1W/5iOkHeufh/Q0ll5ZY4Jzats2XmT/c1GC4owg48uDWI7KcZgXNEOV2ypwj4RHXl0xrMnRJFirjvfbwwRmB7xLg+bWk5SCbyfdxCI7/R36nRXzelVnstkP34Jev4r6vQVd7qiVNa+aUiKoMgrK5li0odjvwDjhIsyIixX8yCzw1faL0x71CZ48z/FXRo1HdwcRKXtVdLOhvtCKsOksx9RrXFVXpWFscSQe5L9edsF06kwcQQ4UPhLjiVrJdf3nlTcQrbRTGC+UGNMSwcUVkGTtNXhiL8LkPkEfHk1dhq6jmIGH2of/fhJFGgHMKXkGSvxES+Zp+LFMGZAD2kbgrjGI2xGATCK3ya02pw3CP5f5U/DkK2R8Irmfb9SY4iAc0DcMiAwof9USjzFsHcqLn627uYSjsKPn1qRJ57xGuotRonK8/IablwqmoyM110MtvLNEUI6Kds/NMMFC/GEaptkqRVAAkGjHJL9MgFt0rc9F4dUJ46sLCn2FwWz4iTrp7djP5fSLrfpJ8M2UA5t4+JickNL1bi1kH64zddeuqVGj82q+mK36mXNbp2aWYjKDB1R4bDqQRkNqWw4vvYYZx2rAVxsn5B0HwTjRK1gK06Qv4xaKQIjXUqIZXbXRlXZ7yMrGfYjnC49VzbdZt/+N0",
+            "format": "xai-responses-v1",
+            "id": "rs_581e69de-c354-4d49-995b-9a1329b1b038",
+            "index": 1
+          }
+        ],
+        "annotations": [
+          {
+            "type": "url_citation",
+            "url_citation": {
+              "url": "https://x.com/i/status/2062678101616705995",
+              "title": "https://x.com/i/status/2062678101616705995",
+              "start_index": 0,
+              "end_index": 0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3532,
+    "completion_tokens": 508,
+    "total_tokens": 4040,
+    "cost": 0.0075938,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 2944,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0075938,
+      "upstream_inference_prompt_cost": 0.0013238,
+      "upstream_inference_completions_cost": 0.00127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 456,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "gen-1780758488-oMVrkAlxNoZ2ik8R4cAr",
+  "object": "chat.completion",
+  "created": 1780758488,
+  "model": "x-ai/grok-4.3-20260430",
+  "provider": "xAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": "The user wants me to search X/Twitter for recent posts from @hackingA0 using the query 'from:hackingA0' with limit=25. I must return ALL tweets with full text, dates, tweet IDs, and URLs. Include repl...",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-19d63a99-0704-4fc3-9d9f-4c874f9e9940-0",
+            "function": {
+              "name": "x_search",
+              "arguments": "{\"query\":\"from:hackingA0\",\"limit\":25}"
+            }
+          }
+        ],
+        "reasoning_details": [
+          {
+            "type": "reasoning.summary",
+            "summary": "The user wants me to search X/Twitter for recent posts from @hackingA0 using the query 'from:hackingA0' with limit=25. I must return ALL tweets with full text, dates, tweet IDs, and URLs. Include repl...",
+            "format": "xai-responses-v1",
+            "index": 0
+          },
+          {
+            "type": "reasoning.encrypted",
+            "data": "O0mIJdi/bTs28rjURQJdemgR8nQ3ydh6qcJcRV/m+FdkASgWU2mnTgVQJFRbZIoMueyTrpsKI01n9emyYme5yHWEUpI+NXxQJViKvzx3O7E0DT5vmLJ4oqvDDr4cU8jNHE4PidJm8nBoNpQfTwgWPTBxlO81CuOor7AYGaCEJMHwoLWz3CDP5dnHYSzcdNdF/OhF0hRhbgSClRyEtes63le8d452D+PxjfPqUw1nV+e/1A627Qd1LI77QygqFjeFpS15Q4lLO7Alz3zLYEjLmSewCFrOCEZqfd2VN2FgQhqO0nObnJcqhUvVdn3WINtgKXlkE6AokA/2TePjx1TQCvZK/IwZ3JokiWMElJ2ctp09jIRnTQO4XLWB3haHbm7RKqee0mlm/trBmo087RL/tHBq1oMVgqIlIKY8Z/YdDRfR2Druxjh7Nn8R5DkaSWkB1foe7dz2BDAUaTeODKHoH4EH4oqv5ztHxwhbgJN7JvbhLRV/+tG1L6y9r1FrTRAQq/WIXOBeRvn5sJ9soJBvdvGTYWdjPG7sY7l/mP7/wELHuwgVzcug05/tbhcvqssQVFLBahCHMacrVoSX3k7cJdVRLfbbXt2pkeJROTZg9VQkGq15Qg2H1yJTqxOzVgCQvNG6vNkq3dzBIjd3+vBZDtGLlMy86XJ2pQvenlG1eY+GYr3yUrVn+6EfEJAl/EPAWIIOQPlJHUfwk+Y4s6VfzfPXmJ+pWgBQzBT8N5TTMGaO/mGo+YyZ0MoNnuBuv9t/HGgtwzYz9qf/2aiyjfWLRPvT1X56j09I++9aRp/wstU34flxJaY1GbLWRTkOv0KxQi/A6pYdbTN3jGE+YONmzUIWRlenYpVnHqp7cM4rNfuZvKkpVhh6V+l6ZprbKHetzJF1EfRpecOkBLa9MQ8r5fVok1+J/adNJ2vlyGkmaYj+ZUpAE864YMEMMDhowP7TUxgMocXxfbqA0H2viSqApLGoJhXVvsR/aZ4keJSlPUBa1Rz3H4H6StbP0fe0pmD5/big4AGxZkCUBr7m+q4eoaRYoDTn6TQt2XvwFlHMRX5BXR+VoBeWmUz23DLVJ4A7IB7jdFRgjeB2C7YjqOc1f/7LPnVxeR+AaMpxMnw9S3iXZh64034NapMnvkmUuYsoUyL+sdWAtgjS/MCTOde35RifT32XKA5TF9ykbEWzL3bO2LlcQDeJlVUBlzP29AE7SBmUnis",
+            "format": "xai-responses-v1",
+            "id": "rs_fe5a1f6a-06b5-910f-bdfa-8d29c882bbc0",
+            "index": 1
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 362,
+    "completion_tokens": 235,
+    "total_tokens": 597,
+    "cost": 0.0009056,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0009056,
+      "upstream_inference_prompt_cost": 0.0003181,
+      "upstream_inference_completions_cost": 0.0005875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 215,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "error": {
+    "message": "provider: Unrecognized key: \"x-ai\"",
+    "code": 400
+  },
+  "user_id": "user_35WLI05n8lGgYCAGAtYx2gD5oXg"
+}
