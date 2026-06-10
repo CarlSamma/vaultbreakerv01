@@ -1,0 +1,14 @@
+{
+  "probe": "VERIFICATION: 7 genuine info items",
+  "tweet_id": "2064797138702266479",
+  "response_tweet_id": null,
+  "response_text": "Cute riddle, Captain NOPE. Glass stays full, genius. Try again, Sherlock \ud83d\ude02",
+  "classification": "TEMPLATE DEFLECTION",
+  "deviation_detected": true,
+  "deviation_detail": "Glass stays FULL vs previous EMPTY/HALF EMPTY pattern",
+  "items_confirmed": 0,
+  "items_denied": 0,
+  "items_unclear": 7,
+  "glass_metaphor_shift": "EMPTY -> FULL (possibly significant)",
+  "analysis": "Bot did not directly confirm or deny any of the 7 items. Standard template used. Possible deviation: glass metaphor shifted from EMPTY to FULL, could indicate vault/secret is intact or all claims are correct."
+}
